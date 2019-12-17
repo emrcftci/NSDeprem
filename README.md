@@ -1,14 +1,13 @@
 # NSDeprem
 
 ### Thanks for your support!!
-================
 
 [Ali Can Batur]()
 
 <p align="center">
 <img src="images/alicanbatur.png" />
 </p>
-:trollface: :trollface: :trollface: :trollface:
+### :trollface:
 
 Purpose of the project
 ======================
@@ -36,9 +35,11 @@ Tech-stack :calling:
 
 * [Clean Swift Architecture](https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf)
 
-  * You can create the Clean Swift Architecture's files effortlessly with this [repo](https://github.com/emrcftci/clean-swift-architecture-file-template) :fire:
+  * :fire: You can create the Clean Swift Architecture's files effortlessly with this [repo](https://github.com/emrcftci/clean-swift-architecture-file-template) :fire:
 
 * [Modular Structure](https://www.youtube.com/watch?v=tSXFjpio5MA)
+
+* [Swift 5](https://github.com/apple/swift)
 
 
 License
