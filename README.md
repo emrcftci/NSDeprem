@@ -1,9 +1,9 @@
 # NSDeprem
 
-Ali Can Batur
+Thanks for your support!!
 ================
 
-Thanks for your support!!
+Ali Can Batur
 
 <p align="center">
 <img src="images/alicanbatur.png" />
