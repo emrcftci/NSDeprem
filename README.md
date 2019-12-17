@@ -1,5 +1,15 @@
 # NSDeprem
 
+Ali Can Batur
+================
+
+Thanks for your support!!
+
+<p align="center">
+<img src="images/alicanbatur.png" />
+</p>
+:trollface: :trollface: :trollface: :trollface:
+
 Purpose of the project
 ======================
 
