@@ -2,12 +2,12 @@
 
 ### Thanks for your support!!
 
-[Ali Can Batur]()
+:arrow_right: [Ali Can Batur]()
 
 <p align="center">
 <img src="images/alicanbatur.png" />
 </p>
-### :trollface:
+:trollface:
 
 Purpose of the project
 ======================
