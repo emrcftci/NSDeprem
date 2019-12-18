@@ -8,12 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		29416D0523A96266004AA792 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 29416D0323A96266004AA792 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29BEEB1523AAA70800EC437F /* ParametersEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1023AAA70800EC437F /* ParametersEncoding.swift */; };
+		29BEEB1623AAA70800EC437F /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1123AAA70800EC437F /* NetworkResponse.swift */; };
+		29BEEB1723AAA70800EC437F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1223AAA70800EC437F /* HTTPMethod.swift */; };
+		29BEEB1823AAA70800EC437F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1323AAA70800EC437F /* Task.swift */; };
+		29BEEB1923AAA70800EC437F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1423AAA70800EC437F /* NetworkError.swift */; };
+		29BEEB2223AAA72500EC437F /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1B23AAA72500EC437F /* URLSessionProvider.swift */; };
+		29BEEB2323AAA72500EC437F /* EarthQuakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1D23AAA72500EC437F /* EarthQuakeService.swift */; };
+		29BEEB2423AAA72500EC437F /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB1E23AAA72500EC437F /* NetworkLogger.swift */; };
+		29BEEB2523AAA72500EC437F /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB2023AAA72500EC437F /* URLComponentsExtension.swift */; };
+		29BEEB2623AAA72500EC437F /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB2123AAA72500EC437F /* URLRequestExtension.swift */; };
+		29BEEB2B23AAA7BD00EC437F /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB2823AAA7BD00EC437F /* ServiceProtocol.swift */; };
+		29BEEB2C23AAA7BD00EC437F /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB2923AAA7BD00EC437F /* URLSessionProtocol.swift */; };
+		29BEEB2D23AAA7BD00EC437F /* ProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BEEB2A23AAA7BD00EC437F /* ProviderProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29416D0023A96266004AA792 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29416D0323A96266004AA792 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		29416D0423A96266004AA792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29BEEB1023AAA70800EC437F /* ParametersEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersEncoding.swift; sourceTree = "<group>"; };
+		29BEEB1123AAA70800EC437F /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		29BEEB1223AAA70800EC437F /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		29BEEB1323AAA70800EC437F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		29BEEB1423AAA70800EC437F /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		29BEEB1B23AAA72500EC437F /* URLSessionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
+		29BEEB1D23AAA72500EC437F /* EarthQuakeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthQuakeService.swift; sourceTree = "<group>"; };
+		29BEEB1E23AAA72500EC437F /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		29BEEB2023AAA72500EC437F /* URLComponentsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
+		29BEEB2123AAA72500EC437F /* URLRequestExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		29BEEB2823AAA7BD00EC437F /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		29BEEB2923AAA7BD00EC437F /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		29BEEB2A23AAA7BD00EC437F /* ProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +72,63 @@
 		29416D0223A96266004AA792 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				29BEEB2723AAA7BD00EC437F /* Protocols */,
+				29BEEB1F23AAA72500EC437F /* Extensions */,
+				29BEEB1A23AAA72500EC437F /* Provider */,
+				29BEEB1C23AAA72500EC437F /* Services */,
+				29BEEB0F23AAA70800EC437F /* Enums */,
 				29416D0323A96266004AA792 /* Networking.h */,
 				29416D0423A96266004AA792 /* Info.plist */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		29BEEB0F23AAA70800EC437F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				29BEEB1023AAA70800EC437F /* ParametersEncoding.swift */,
+				29BEEB1123AAA70800EC437F /* NetworkResponse.swift */,
+				29BEEB1223AAA70800EC437F /* HTTPMethod.swift */,
+				29BEEB1323AAA70800EC437F /* Task.swift */,
+				29BEEB1423AAA70800EC437F /* NetworkError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		29BEEB1A23AAA72500EC437F /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				29BEEB1B23AAA72500EC437F /* URLSessionProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		29BEEB1C23AAA72500EC437F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				29BEEB1D23AAA72500EC437F /* EarthQuakeService.swift */,
+				29BEEB1E23AAA72500EC437F /* NetworkLogger.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		29BEEB1F23AAA72500EC437F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				29BEEB2023AAA72500EC437F /* URLComponentsExtension.swift */,
+				29BEEB2123AAA72500EC437F /* URLRequestExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		29BEEB2723AAA7BD00EC437F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				29BEEB2823AAA7BD00EC437F /* ServiceProtocol.swift */,
+				29BEEB2923AAA7BD00EC437F /* URLSessionProtocol.swift */,
+				29BEEB2A23AAA7BD00EC437F /* ProviderProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +210,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BEEB2C23AAA7BD00EC437F /* URLSessionProtocol.swift in Sources */,
+				29BEEB2423AAA72500EC437F /* NetworkLogger.swift in Sources */,
+				29BEEB2623AAA72500EC437F /* URLRequestExtension.swift in Sources */,
+				29BEEB1823AAA70800EC437F /* Task.swift in Sources */,
+				29BEEB2523AAA72500EC437F /* URLComponentsExtension.swift in Sources */,
+				29BEEB2D23AAA7BD00EC437F /* ProviderProtocol.swift in Sources */,
+				29BEEB1523AAA70800EC437F /* ParametersEncoding.swift in Sources */,
+				29BEEB1623AAA70800EC437F /* NetworkResponse.swift in Sources */,
+				29BEEB2223AAA72500EC437F /* URLSessionProvider.swift in Sources */,
+				29BEEB1723AAA70800EC437F /* HTTPMethod.swift in Sources */,
+				29BEEB2323AAA72500EC437F /* EarthQuakeService.swift in Sources */,
+				29BEEB1923AAA70800EC437F /* NetworkError.swift in Sources */,
+				29BEEB2B23AAA7BD00EC437F /* ServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
