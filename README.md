@@ -1,7 +1,7 @@
 # NSDeprem
 
 <p align="center">
-<img src="images/launch-logo.pdf" />
+<img src="images/launch-logo.png" />
 </p>
 
 
