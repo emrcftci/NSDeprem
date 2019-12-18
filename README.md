@@ -1,5 +1,10 @@
 # NSDeprem
 
+<p align="center">
+<img src="images/launch-logo.pdf" />
+</p>
+
+
 ### Thanks for your support!!
 
 :arrow_right: [Ali Can Batur]()
@@ -21,7 +26,7 @@ Find this repo useful?
 
 Find this repo useful? :heart: 
 
-Support it by joining [stargazers](https://github.com/emrcftci/NSDeprem/stargazers) for this repository. :star: 🤩
+Support it by joining [stargazers](https://github.com/emrcftci/NSDeprem/stargazers) for this repository. :star:
 
 You can follow us for our next creations! 🤩
 

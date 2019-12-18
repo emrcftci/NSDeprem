@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2928CB0623A9F0F700BEAA0F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2928CB0523A9F0F700BEAA0F /* ListCell.swift */; };
+		2928CB0823A9F10300BEAA0F /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2928CB0723A9F10300BEAA0F /* ListCell.xib */; };
+		2928CB1023A9F48800BEAA0F /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2928CB0F23A9F48800BEAA0F /* NibLoadable.swift */; };
+		2928CB3B23A9F93700BEAA0F /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2928CB3923A9F93700BEAA0F /* UIView+Additions.swift */; };
+		2928CB3C23A9F93700BEAA0F /* CALayer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2928CB3A23A9F93700BEAA0F /* CALayer+Additions.swift */; };
 		29416CC023A9621E004AA792 /* UIComp.h in Headers */ = {isa = PBXBuildFile; fileRef = 29416CBE23A9621E004AA792 /* UIComp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2928CB0523A9F0F700BEAA0F /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		2928CB0723A9F10300BEAA0F /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		2928CB0F23A9F48800BEAA0F /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		2928CB3923A9F93700BEAA0F /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		2928CB3A23A9F93700BEAA0F /* CALayer+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Additions.swift"; sourceTree = "<group>"; };
 		29416CBB23A9621E004AA792 /* UIComp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29416CBE23A9621E004AA792 /* UIComp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComp.h; sourceTree = "<group>"; };
 		29416CBF23A9621E004AA792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2928CB0423A9F0DC00BEAA0F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2928CB0523A9F0F700BEAA0F /* ListCell.swift */,
+				2928CB0723A9F10300BEAA0F /* ListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2928CB0E23A9F47C00BEAA0F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2928CB0F23A9F48800BEAA0F /* NibLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2928CB3823A9F92A00BEAA0F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2928CB3923A9F93700BEAA0F /* UIView+Additions.swift */,
+				2928CB3A23A9F93700BEAA0F /* CALayer+Additions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		29416CB123A9621E004AA792 = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +82,9 @@
 		29416CBD23A9621E004AA792 /* UIComp */ = {
 			isa = PBXGroup;
 			children = (
+				2928CB3823A9F92A00BEAA0F /* Extension */,
+				2928CB0E23A9F47C00BEAA0F /* Protocols */,
+				2928CB0423A9F0DC00BEAA0F /* Cell */,
 				29416CBE23A9621E004AA792 /* UIComp.h */,
 				29416CBF23A9621E004AA792 /* Info.plist */,
 			);
@@ -95,6 +134,7 @@
 				TargetAttributes = {
 					29416CBA23A9621E004AA792 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -121,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2928CB0823A9F10300BEAA0F /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2928CB3B23A9F93700BEAA0F /* UIView+Additions.swift in Sources */,
+				2928CB3C23A9F93700BEAA0F /* CALayer+Additions.swift in Sources */,
+				2928CB0623A9F0F700BEAA0F /* ListCell.swift in Sources */,
+				2928CB1023A9F48800BEAA0F /* NibLoadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +305,7 @@
 		29416CC423A9621E004AA792 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -267,6 +313,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIComp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -275,14 +322,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = emreciftci.UIComp;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		29416CC523A9621E004AA792 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -290,6 +340,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIComp/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,8 +349,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = emreciftci.UIComp;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
