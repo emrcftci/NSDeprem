@@ -6,16 +6,41 @@
 //  Copyright © 2019 emre Çiftçi. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import UIComp
 
-enum List {
+public enum List {
 
-  enum UseCase {
+  public enum FetchList {
 
-    struct Request { }
+    public class ListDataSource: ListCellDataSource {
 
-    struct Response { }
+      public var zone: String
+      public var date: String
+      public var intensity: String
 
-    struct ViewModel { }
+      public init(earthquake: EarthQuake) {
+        self.zone = earthquake.zone
+        self.date = "\(earthquake.date) - \(earthquake.time)"
+        self.intensity = earthquake.intensity
+      }
+    }
+
+    public struct EarthQuake: Codable {
+      let depth: String
+      let zone: String
+      let time: String
+      let date: String
+      let intensity: String
+      let lat: String
+      let long: String
+    }
+
+    public struct Response: Codable {
+      let info: String
+      let earthquakes: [EarthQuake]
+    }
+
+    public struct ViewModel { }
   }
 }

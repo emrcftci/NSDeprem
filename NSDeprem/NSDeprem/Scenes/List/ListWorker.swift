@@ -9,24 +9,27 @@
 import Networking
 
 final public class ListWorker {
-    private let sessionProvider = URLSessionProvider()
+
+  private let sessionProvider = URLSessionProvider()
+
+  public typealias ResourcesHandler = ((List.FetchList.Response?) -> Void)
 }
 
-// MARK: - Public Helpers
+// MARK: - Service Calls
 
 public extension ListWorker {
 
-    func getResources(completion: @escaping () -> Void) {
-        sessionProvider.request(type: String.self, service: EarthQuakeService.getList) { response in
+  func getResources(completion: @escaping ResourcesHandler) {
+    sessionProvider.request(type: List.FetchList.Response.self, service: EarthQuakeService.getList) { response in
 
-            switch response {
-            case let .success(sources):
-//                completion(sources)
+      switch response {
+      case let .success(sources):
+        completion(sources)
 
-            case .failure(_):
-//                completion(nil)
-            }
+      case .failure(_):
+        completion(nil)
+      }
 
-        }
     }
+  }
 }

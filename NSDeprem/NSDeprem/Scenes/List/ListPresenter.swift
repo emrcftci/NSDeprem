@@ -10,10 +10,16 @@ import Foundation
 
 protocol ListPresentationLogic: class {
 
+  func presentList()
 }
 
 final class ListPresenter: ListPresentationLogic {
 
   weak var viewController: ListDisplayLogic?
 
+  // MARK: - ListPresentationLogic
+
+  func presentList() {
+    viewController?.displayList()
+  }
 }

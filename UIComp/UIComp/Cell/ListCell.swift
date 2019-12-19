@@ -10,7 +10,7 @@ import UIKit
 
 public protocol ListCellDataSource: class {
 
-  var zonePreview: UIImage { get set }
+//  var zonePreview: UIImage { get set }
   var zone: String { get set }
   var date: String { get set }
   var intensity: String { get set }
@@ -31,7 +31,7 @@ public class ListCell: UITableViewCell, NibLoadable {
   }
 
   public func configure(with dataSource: ListCellDataSource) {
-    mapImageView.image = dataSource.zonePreview
+//    mapImageView.image = dataSource.zonePreview
     zoneLabel.text = dataSource.zone
     dateLabel.text = dataSource.date
     intensityLabel.text = dataSource.intensity

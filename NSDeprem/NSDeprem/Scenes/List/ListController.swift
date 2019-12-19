@@ -12,6 +12,7 @@ import Common
 
 protocol ListDisplayLogic: class {
 
+  func displayList()
 }
 
 final class ListController: UIViewController {
@@ -57,6 +58,7 @@ final class ListController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     prepareTableView()
+    fetchList()
   }
 
   private func prepareTableView() {
@@ -65,6 +67,21 @@ final class ListController: UIViewController {
     tableView.register(ListCell.defaultNib, forCellReuseIdentifier: Constants.Identifiers.listCell.rawValue)
     tableView.tableFooterView = UIView()
   }
+
+  private func fetchList() {
+    interactor?.fetchList()
+  }
+}
+
+// MARK: - ListDisplayLogic
+
+extension ListController: ListDisplayLogic {
+
+  func displayList() {
+    safeSync {
+      self.tableView.reloadData()
+    }
+  }
 }
 
 // MARK: - UITableViewDataSource
@@ -72,7 +89,7 @@ final class ListController: UIViewController {
 extension ListController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return router?.dataStore?.sources?.count ?? 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,13 +97,10 @@ extension ListController: UITableViewDataSource {
       let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.listCell.rawValue) as? ListCell
       else { return UITableViewCell() }
 
-    // TODO: Configure with service call
-    let dataSource = DataSource()
-    dataSource.date = "11/07/1994"
-    dataSource.intensity = "2.6"
-    dataSource.zone = "Atakoy"
-    dataSource.zonePreview = UIImage(named: "sample-preview")!
-    cell.configure(with: dataSource)
+    if let earthquake = router?.dataStore?.sources?[indexPath.row] {
+      cell.configure(with: earthquake)
+    }
+
     return cell
   }
 
@@ -99,18 +113,4 @@ extension ListController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
   }
-}
-
-// MARK: - ListDisplayLogic
-
-extension ListController: ListDisplayLogic {
-
-}
-
-class DataSource: ListCellDataSource {
-
-  var zonePreview: UIImage = UIImage()
-  var zone: String = ""
-  var date: String = ""
-  var intensity: String = ""
 }
