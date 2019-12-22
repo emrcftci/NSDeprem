@@ -6,14 +6,18 @@
 //  Copyright © 2019 emre Çiftçi. All rights reserved.
 //
 
+import Common
 import UIKit
+import MapKit
 
 public protocol ListCellDataSource: class {
 
-//  var zonePreview: UIImage { get set }
   var zone: String { get set }
   var date: String { get set }
   var intensity: String { get set }
+  var lat: String { get set }
+  var long: String { get set }
+  var zonePreview: UIImage? { get set }
 }
 
 public class ListCell: UITableViewCell, NibLoadable {
@@ -30,13 +34,35 @@ public class ListCell: UITableViewCell, NibLoadable {
     }
   }
 
+  public override func awakeFromNib() {
+    super.awakeFromNib()
+    prepareRoundedLabel(intensityLabel)
+  }
+  
+  public override func prepareForReuse() {
+    super.prepareForReuse()
+    resetAllFields()
+  }
+
+  private func resetAllFields() {
+    mapImageView.image = nil
+    zoneLabel.text = ""
+    dateLabel.text = ""
+    intensityLabel.text = ""
+  }
+
+  public func zonePreview() -> UIImage? {
+    return mapImageView.image
+  }
+
   public func configure(with dataSource: ListCellDataSource) {
-//    mapImageView.image = dataSource.zonePreview
     zoneLabel.text = dataSource.zone
     dateLabel.text = dataSource.date
     intensityLabel.text = dataSource.intensity
 
-    prepareRoundedLabel(intensityLabel)
+    MapPreview.shared.previewImage(lat: Double(dataSource.lat), long: Double(dataSource.long)) { [weak self] preview in
+      self?.mapImageView.image = preview
+    }
   }
 }
 

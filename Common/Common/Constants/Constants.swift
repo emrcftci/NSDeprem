@@ -12,6 +12,8 @@ public enum Constants {
 
   public enum Identifiers: String {
 
+    case detailController
+    case detailStoryboard = "Detail"
     case listCell = "ListCell"
   }
 }

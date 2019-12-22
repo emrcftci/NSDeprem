@@ -6,16 +6,19 @@
 //  Copyright © 2019 emre Çiftçi. All rights reserved.
 //
 
-import Foundation
+import Common
+import MapKit
 
 protocol ListBusinessLogic: class {
 
   func fetchList()
+  func selectItem(at index: Int, with image: UIImage?)
 }
 
 protocol ListDataStore: class {
 
-  var sources: [List.FetchList.ListDataSource]? { get set }
+  var selectedEarthquake: List.DataSource? { get set }
+  var sources: [List.DataSource]? { get set }
 }
 
 class ListInteractor: ListBusinessLogic, ListDataStore {
@@ -25,31 +28,38 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
 
   // MARK: - ListDataStore
 
-  var sources: [List.FetchList.ListDataSource]?
+  var selectedEarthquake: List.DataSource?
+  var sources: [List.DataSource]?
 
   // MARK: - ListBusinessLogic
 
   func fetchList() {
 
-    worker?.getResources { [weak self] sources in
+    worker?.getResources { [weak self] response in
 
-      self?.sources = sources?.earthquakes.compactMap { List.FetchList.ListDataSource(earthquake: $0) }
-      self?.checkSourcesForAction()
+      self?.sources = response?.earthquakes.compactMap { List.DataSource(earthquake: $0) }
+      self?.checkSourcesForAction(with: response)
     }
   }
+
+  func selectItem(at index: Int, with image: UIImage?) {
+    selectedEarthquake = sources?[index]
+    selectedEarthquake?.zonePreview = image
+    presenter?.presentDetail()
+  }
+  
 }
 
 // MARK: - Private Helpers
 
 private extension ListInteractor {
 
-    func checkSourcesForAction() {
+  func checkSourcesForAction(with response: List.Fetch.Response?) {
 
-      guard sources != nil else {
-        // TODO: Show failure alert
-        return
-      }
-
-      self.presenter?.presentList()
+    guard let response = response else {
+      // TODO: Show failure alert
+      return
     }
+    presenter?.presentList(response: response)
+  }
 }

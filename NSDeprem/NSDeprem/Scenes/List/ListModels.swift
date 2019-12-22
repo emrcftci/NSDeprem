@@ -11,20 +11,28 @@ import UIComp
 
 public enum List {
 
-  public enum FetchList {
+  public class DataSource: ListCellDataSource {
 
-    public class ListDataSource: ListCellDataSource {
+    public var zone: String
+    public var date: String
+    public var depth: String
+    public var intensity: String
+    public var lat: String
+    public var long: String
+    public var zonePreview: UIImage?
 
-      public var zone: String
-      public var date: String
-      public var intensity: String
-
-      public init(earthquake: EarthQuake) {
-        self.zone = earthquake.zone
-        self.date = "\(earthquake.date) - \(earthquake.time)"
-        self.intensity = earthquake.intensity
-      }
+    public init(earthquake: Fetch.EarthQuake, preview: UIImage? = nil) {
+      self.zone = earthquake.zone
+      self.date = "\(earthquake.date) - \(earthquake.time)"
+      self.depth = earthquake.depth
+      self.intensity = earthquake.intensity
+      self.lat = earthquake.lat
+      self.long = earthquake.long
+      self.zonePreview = preview
     }
+  }
+
+  public enum Fetch {
 
     public struct EarthQuake: Codable {
       let depth: String
@@ -41,6 +49,8 @@ public enum List {
       let earthquakes: [EarthQuake]
     }
 
-    public struct ViewModel { }
+    public struct ViewModel {
+      let earthquakes: [DataSource]
+    }
   }
 }

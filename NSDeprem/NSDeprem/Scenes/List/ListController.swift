@@ -9,16 +9,20 @@
 import UIKit
 import UIComp
 import Common
+import MapKit
 
 protocol ListDisplayLogic: class {
 
-  func displayList()
+  func displayList(viewModel: List.Fetch.ViewModel)
+  func displayDetail()
 }
 
 final class ListController: UIViewController {
 
   var interactor: ListBusinessLogic?
   var router: (ListRoutingLogic & ListDataPassing)?
+
+  private var dataSource: List.Fetch.ViewModel?
 
   // MARK: - Outlets
 
@@ -77,10 +81,15 @@ final class ListController: UIViewController {
 
 extension ListController: ListDisplayLogic {
 
-  func displayList() {
+  func displayList(viewModel: List.Fetch.ViewModel) {
     safeSync {
+      self.dataSource = viewModel
       self.tableView.reloadData()
     }
+  }
+
+  func displayDetail() {
+    router?.routeToDetail()
   }
 }
 
@@ -89,7 +98,7 @@ extension ListController: ListDisplayLogic {
 extension ListController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return router?.dataStore?.sources?.count ?? 0
+    return dataSource?.earthquakes.count ?? 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,7 +106,7 @@ extension ListController: UITableViewDataSource {
       let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Identifiers.listCell.rawValue) as? ListCell
       else { return UITableViewCell() }
 
-    if let earthquake = router?.dataStore?.sources?[indexPath.row] {
+    if let earthquake = dataSource?.earthquakes[indexPath.row] {
       cell.configure(with: earthquake)
     }
 
@@ -112,5 +121,7 @@ extension ListController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    let selectedCell = tableView.cellForRow(at: indexPath) as? ListCell
+    interactor?.selectItem(at: indexPath.row, with: selectedCell?.zonePreview())
   }
 }

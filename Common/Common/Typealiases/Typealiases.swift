@@ -6,6 +6,7 @@
 //  Copyright © 2019 emre Çiftçi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public typealias VoidCallback = () -> Void
+public typealias ImageCallback = (UIImage?) -> Void
