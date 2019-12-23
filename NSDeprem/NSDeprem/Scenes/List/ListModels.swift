@@ -45,7 +45,6 @@ public enum List {
     }
 
     public struct Response: Codable {
-      let info: String
       let earthquakes: [EarthQuake]
     }
 

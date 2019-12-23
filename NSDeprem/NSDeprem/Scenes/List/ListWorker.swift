@@ -6,11 +6,14 @@
 //  Copyright © 2019 emre Çiftçi. All rights reserved.
 //
 
+import Common
 import Networking
 
 final public class ListWorker {
 
   private let sessionProvider = URLSessionProvider()
+
+  private let cacher = Cacher.shared
 
   public typealias ResourcesHandler = ((List.Fetch.Response?) -> Void)
 }
@@ -30,6 +33,21 @@ public extension ListWorker {
         completion(nil)
       }
 
+    }
+  }
+
+  func cacheImage(with item: List.DataSource, _ completion: @escaping ImageCallback) {
+
+    if let cachedImage = cacher.cachedImage(for: item.date) {
+      completion(cachedImage)
+      return
+    }
+
+    MapPreview.shared.previewImage(lat: Double(item.lat), long: Double(item.long)) { [weak self] image in
+
+      if let image = image {
+        self?.cacher.cacheImage(with: image, for: item.date, completion)
+      }
     }
   }
 }

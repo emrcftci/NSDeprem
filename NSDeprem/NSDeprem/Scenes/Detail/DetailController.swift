@@ -28,6 +28,7 @@ final class DetailController: UIViewController {
   @IBOutlet private weak var footerView: UIView! {
     didSet {
       footerView.makeTopCornersRounded(8)
+      footerView.addShadow(.top)
     }
   }
 

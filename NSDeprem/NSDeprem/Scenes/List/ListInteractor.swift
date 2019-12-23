@@ -36,8 +36,6 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
   func fetchList() {
 
     worker?.getResources { [weak self] response in
-
-      self?.sources = response?.earthquakes.compactMap { List.DataSource(earthquake: $0) }
       self?.checkSourcesForAction(with: response)
     }
   }
@@ -56,10 +54,26 @@ private extension ListInteractor {
 
   func checkSourcesForAction(with response: List.Fetch.Response?) {
 
-    guard let response = response else {
-      // TODO: Show failure alert
-      return
+    guard let response = response else { return }
+
+    sources = response.earthquakes.compactMap {
+      List.DataSource(earthquake: $0)
     }
-    presenter?.presentList(response: response)
+
+    let dispatchGroup = DispatchGroup()
+    dispatchGroup.enter()
+    setPreviews {
+      self.presenter?.presentList(response: response)
+    }
+  }
+
+  func setPreviews(_ completion: @escaping VoidCallback) {
+
+    sources?.forEach { earthquake in
+      worker?.cacheImage(with: earthquake) { preview in
+        earthquake.zonePreview = preview
+      }
+    }
+    completion()
   }
 }

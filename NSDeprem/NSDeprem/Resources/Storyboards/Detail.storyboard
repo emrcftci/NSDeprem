@@ -23,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcH-yl-zGY">
-                                <rect key="frame" x="357" y="60" width="41" height="41"/>
+                                <rect key="frame" x="16" y="60" width="41" height="41"/>
                                 <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                 <state key="normal" image="close"/>
                                 <connections>
@@ -77,12 +77,12 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aAi-uK-hsL" secondAttribute="bottom" id="0lb-Yv-B9f"/>
                             <constraint firstItem="aAi-uK-hsL" firstAttribute="leading" secondItem="hvO-wO-huA" secondAttribute="leading" id="35Z-6A-IZB"/>
+                            <constraint firstItem="vcH-yl-zGY" firstAttribute="leading" secondItem="hvO-wO-huA" secondAttribute="leading" constant="16" id="AAv-U4-8bc"/>
                             <constraint firstItem="hvO-wO-huA" firstAttribute="trailing" secondItem="aAi-uK-hsL" secondAttribute="trailing" id="GEd-1Y-Xx0"/>
                             <constraint firstItem="aAi-uK-hsL" firstAttribute="top" secondItem="fKT-jl-XCF" secondAttribute="bottom" constant="-14" id="Hs7-XC-Afd"/>
                             <constraint firstItem="fKT-jl-XCF" firstAttribute="leading" secondItem="hvO-wO-huA" secondAttribute="leading" id="KA4-pK-wy9"/>
                             <constraint firstItem="vcH-yl-zGY" firstAttribute="top" secondItem="hvO-wO-huA" secondAttribute="top" constant="16" id="Zrd-je-u2n"/>
                             <constraint firstItem="hvO-wO-huA" firstAttribute="trailing" secondItem="fKT-jl-XCF" secondAttribute="trailing" id="d5o-To-0Vf"/>
-                            <constraint firstItem="hvO-wO-huA" firstAttribute="trailing" secondItem="vcH-yl-zGY" secondAttribute="trailing" constant="16" id="hts-ro-X06"/>
                             <constraint firstItem="fKT-jl-XCF" firstAttribute="top" secondItem="Ha4-33-SW1" secondAttribute="top" id="the-GP-alW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hvO-wO-huA"/>

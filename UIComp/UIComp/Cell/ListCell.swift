@@ -29,6 +29,7 @@ public class ListCell: UITableViewCell, NibLoadable {
 
   @IBOutlet private weak var containerView: UIView! {
     didSet {
+      containerView.clipsToBounds = true
       containerView.makeAllCornersRounded(8)
       containerView.makeShadow()
     }
@@ -56,13 +57,14 @@ public class ListCell: UITableViewCell, NibLoadable {
   }
 
   public func configure(with dataSource: ListCellDataSource) {
+    mapImageView.image = dataSource.zonePreview
     zoneLabel.text = dataSource.zone
     dateLabel.text = dataSource.date
     intensityLabel.text = dataSource.intensity
 
-    MapPreview.shared.previewImage(lat: Double(dataSource.lat), long: Double(dataSource.long)) { [weak self] preview in
-      self?.mapImageView.image = preview
-    }
+//    MapPreview.shared.previewImage(lat: Double(dataSource.lat), long: Double(dataSource.long)) { [weak self] preview in
+//      self?.mapImageView.image = preview
+//    }
   }
 }
 
