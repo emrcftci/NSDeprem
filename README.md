@@ -28,7 +28,7 @@ Tech-stack :calling:
 
 * [Cache Mechanism - NSCache](https://www.hackingwithswift.com/example-code/system/how-to-cache-data-using-nscache)
 
-<div style=\"height: 100px;\"></div>
+<div style="height: 100px"></div>
 
 TODO :clipboard:
 ======================
