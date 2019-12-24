@@ -13,8 +13,7 @@ Purpose of the project
 #### Powered by [Kandilli Rasathanesi ve Deprem Arastirma Enstitusu](http://m.koeri.boun.edu.tr/dbs3/) :star: 
 
 
-Tech-stack :calling:
-======================
+## Tech-stack :calling:
 
 <img src="images/clean-modular.png" width="150" align="right" hspace="20">
 
@@ -28,10 +27,7 @@ Tech-stack :calling:
 
 * [Cache Mechanism - NSCache](https://www.hackingwithswift.com/example-code/system/how-to-cache-data-using-nscache)
 
-<p></p>
-
-TODO :clipboard:
-======================
+### TODO :clipboard:
 
 - [ ] Unit tests to be added
 - [ ] Increase performance
