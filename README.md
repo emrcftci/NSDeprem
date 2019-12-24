@@ -13,19 +13,20 @@ Purpose of the project
 #### Powered by [Kandilli Rasathanesi ve Deprem Arastirma Enstitusu](http://m.koeri.boun.edu.tr/dbs3/) :star: 
 
 
-## Tech-stack :calling:
+Tech-stack :calling:
+======================
 
-<img src="images/clean-modular.png" width="200" align="right" hspace="20">
+<img src="images/clean-modular.png" width="150" align="right" hspace="20">
 
-- [Clean Swift Architecture](https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf)
+* [Clean Swift Architecture](https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf)
 
-  - :fire: You can create the Clean Swift Architecture's files effortlessly with this [repo](https://github.com/emrcftci/clean-swift-architecture-file-template) :fire:
+  * :fire: You can create the Clean Swift Architecture's files effortlessly with this [repo](https://github.com/emrcftci/clean-swift-architecture-file-template) :fire:
 
-- [Modular Architecture](https://www.youtube.com/watch?v=tSXFjpio5MA)
+* [Modular Architecture](https://www.youtube.com/watch?v=tSXFjpio5MA)
 
-- [Swift 5](https://github.com/apple/swift)
+* [Swift 5](https://github.com/apple/swift)
 
-- [Cache Mechanism - NSCache](https://www.hackingwithswift.com/example-code/system/how-to-cache-data-using-nscache)
+* [Cache Mechanism - NSCache](https://www.hackingwithswift.com/example-code/system/how-to-cache-data-using-nscache)
 
 
 TODO :clipboard:
