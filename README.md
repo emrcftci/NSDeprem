@@ -16,13 +16,24 @@ Purpose of the project
 Tech-stack :calling:
 ======================
 
+<img src="images/clean-modular" width="300" align="right" hspace="20">
+
 * [Clean Swift Architecture](https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf)
 
   * :fire: You can create the Clean Swift Architecture's files effortlessly with this [repo](https://github.com/emrcftci/clean-swift-architecture-file-template) :fire:
 
-* [Modular Structure](https://www.youtube.com/watch?v=tSXFjpio5MA)
+* [Modular Architecture](https://www.youtube.com/watch?v=tSXFjpio5MA)
 
 * [Swift 5](https://github.com/apple/swift)
+
+* [Cache Mechanism - NSCache](https://www.hackingwithswift.com/example-code/system/how-to-cache-data-using-nscache)
+
+
+TODO :clipboard:
+======================
+
+- [ ] Unit tests to be added
+- [ ] Increase performance
 
 
 ### Thanks for your support!!
