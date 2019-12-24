@@ -10,7 +10,7 @@ import MapKit
 
 protocol ListPresentationLogic: class {
 
-  func presentList(response: List.Fetch.Response)
+  func presentList(response: [List.DataSource])
   func presentDetail()
 }
 
@@ -20,12 +20,9 @@ final class ListPresenter: ListPresentationLogic {
 
   // MARK: - ListPresentationLogic
 
-  func presentList(response: List.Fetch.Response) {
-    let dataSource = response.earthquakes.map { earthquake in
-      List.DataSource(earthquake: earthquake)
-    }
+  func presentList(response: [List.DataSource]) {
 
-    let viewModel = List.Fetch.ViewModel(earthquakes: dataSource)
+    let viewModel = List.Fetch.ViewModel(earthquakes: response)
     viewController?.displayList(viewModel: viewModel)
   }
 

@@ -28,8 +28,6 @@ final class ListRouter: ListRoutingLogic, ListDataPassing {
 
     if let detailController = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.detailController.rawValue) as? DetailController {
 
-      detailController.modalTransitionStyle = .crossDissolve
-
       detailController.router?.dataStore?.earthquake = dataStore?.selectedEarthquake
       viewController?.present(detailController, animated: true)
     }

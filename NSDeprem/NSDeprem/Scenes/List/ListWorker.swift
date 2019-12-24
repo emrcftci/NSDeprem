@@ -38,7 +38,9 @@ public extension ListWorker {
 
   func cacheImage(with item: List.DataSource, _ completion: @escaping ImageCallback) {
 
-    if let cachedImage = cacher.cachedImage(for: item.date) {
+    let imageKey = "\(item.date)\(item.intensity)"
+
+    if let cachedImage = cacher.cachedImage(for: imageKey) {
       completion(cachedImage)
       return
     }
@@ -46,7 +48,7 @@ public extension ListWorker {
     MapPreview.shared.previewImage(lat: Double(item.lat), long: Double(item.long)) { [weak self] image in
 
       if let image = image {
-        self?.cacher.cacheImage(with: image, for: item.date, completion)
+        self?.cacher.cacheImage(with: image, for: imageKey, completion)
       }
     }
   }

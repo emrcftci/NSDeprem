@@ -17,5 +17,4 @@ public protocol ServiceProtocol {
     var task: Task { get }
     var headers: Headers? { get }
     var parametersEncoding: ParametersEncoding { get }
-    var apiKey: String { get }
 }

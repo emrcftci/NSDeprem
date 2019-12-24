@@ -42,7 +42,6 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
 
   func selectItem(at index: Int, with image: UIImage?) {
     selectedEarthquake = sources?[index]
-    selectedEarthquake?.zonePreview = image
     presenter?.presentDetail()
   }
   
@@ -60,20 +59,27 @@ private extension ListInteractor {
       List.DataSource(earthquake: $0)
     }
 
-    let dispatchGroup = DispatchGroup()
-    dispatchGroup.enter()
     setPreviews {
-      self.presenter?.presentList(response: response)
+
+      if let sources = self.sources {
+        self.presenter?.presentList(response: sources)
+      }
     }
   }
 
   func setPreviews(_ completion: @escaping VoidCallback) {
 
-    sources?.forEach { earthquake in
+    let dispatchGroup = DispatchGroup()
+
+    sources?.enumerated().forEach { index, earthquake in
+      dispatchGroup.enter()
+
       worker?.cacheImage(with: earthquake) { preview in
         earthquake.zonePreview = preview
+        dispatchGroup.leave()
       }
     }
-    completion()
+
+    dispatchGroup.notify(queue: .main, execute: completion)
   }
 }

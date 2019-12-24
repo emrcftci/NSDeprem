@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 protocol DetailDisplayLogic: class {
 
@@ -20,7 +21,7 @@ final class DetailController: UIViewController {
 
   // MARK: - Outlets
 
-  @IBOutlet private weak var zonePreviewImageView: UIImageView!
+  @IBOutlet private weak var previewImageView: UIImageView!
   @IBOutlet private weak var zoneLabel: UILabel!
   @IBOutlet private weak var dateLabel: UILabel!
   @IBOutlet private weak var depthLabel: UILabel!
@@ -75,12 +76,14 @@ final class DetailController: UIViewController {
   }
 }
 
+// MARK: - DetailDisplayLogic
+
 extension DetailController: DetailDisplayLogic {
 
   func displayView(viewModel: Detail.Prepare.ViewModel) {
     let item = viewModel.item
 
-    zonePreviewImageView.image = item.zonePreview
+    previewImageView.image = viewModel.item.zonePreview
     zoneLabel.text = item.zone
     dateLabel.text = item.date
     depthLabel.text = item.depth

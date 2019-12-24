@@ -22,6 +22,8 @@ final class ListController: UIViewController {
   var interactor: ListBusinessLogic?
   var router: (ListRoutingLogic & ListDataPassing)?
 
+  private let refreshControl = UIRefreshControl()
+
   private var dataSource: List.Fetch.ViewModel?
 
   // MARK: - Outlets
@@ -62,6 +64,7 @@ final class ListController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     prepareTableView()
+    prepareRefreshControl()
     fetchList()
   }
 
@@ -70,10 +73,27 @@ final class ListController: UIViewController {
     tableView.dataSource = self
     tableView.register(ListCell.defaultNib, forCellReuseIdentifier: Constants.Identifiers.listCell.rawValue)
     tableView.tableFooterView = UIView()
+
+    if #available(iOS 10.0, *) {
+        tableView.refreshControl = refreshControl
+    }
+    else {
+        tableView.addSubview(refreshControl)
+    }
   }
 
   private func fetchList() {
     interactor?.fetchList()
+  }
+
+  // MARK: - Refresh Control
+
+  private func prepareRefreshControl() {
+      refreshControl.addTarget(self, action: #selector(didRefreshControlValueChanged(_:)), for: .valueChanged)
+  }
+
+  @objc private func didRefreshControlValueChanged(_ sender: Any) {
+      fetchList()
   }
 }
 
@@ -85,6 +105,7 @@ extension ListController: ListDisplayLogic {
     safeSync {
       self.dataSource = viewModel
       self.tableView.reloadData()
+      self.refreshControl.endRefreshing()
     }
   }
 

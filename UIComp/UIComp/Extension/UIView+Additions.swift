@@ -55,7 +55,6 @@ public extension UIView {
 
     public enum Position: Int {
       case top = -1
-      case bottom = 1
     }
 
     public var color: UIColor
@@ -65,12 +64,8 @@ public extension UIView {
     public var position: Position
 
     public static let top = Shadow(
-      color: UIColor.lightGray,
+      color: UIColor.darkGray,
       opacity: 0.15, radius: 6.0, offset: 6, position: .top)
-
-    public static let bottom = Shadow(
-      color: UIColor.lightGray,
-      opacity: 0.15, radius: 6.0, offset: 6, position: .bottom)
   }
 
   func addShadow(_ shadow: Shadow) {

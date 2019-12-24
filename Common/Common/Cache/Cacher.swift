@@ -16,7 +16,7 @@ public class Cacher {
 
   public func cacheImage(with image: UIImage, for key: String, _ completion: @escaping ImageCallback) {
     imageCache.setObject(image, forKey: key as NSString)
-    completion(image)
+    completion(cachedImage(for: key))
   }
 
   public func cachedImage(for key: String) -> UIImage? {
