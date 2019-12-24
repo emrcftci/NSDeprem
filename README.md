@@ -10,7 +10,11 @@ Purpose of the project
 
 :boom: This is the demo app which has a list of newest earthquakes in Turkey for NSIstanbul presentation about Vapor Server-Side Swift.
 
-#### Powered by [Kandilli Rasathanesi ve Deprem Arastirma Enstitusu](http://m.koeri.boun.edu.tr/dbs3/) :star: 
+<p align="center">
+<img src="images/nsdeprem-preview.gif" />
+</p>
+
+<center> <h1>Powered by [Kandilli Rasathanesi ve Deprem Arastirma Enstitusu](http://m.koeri.boun.edu.tr/dbs3/) :star: </h1> </center>
 
 
 ## Tech-stack :calling:
