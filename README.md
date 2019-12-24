@@ -1,5 +1,3 @@
-# NSDeprem
-
 <p align="center">
 <img src="images/launch-logo.png" />
 </p>
