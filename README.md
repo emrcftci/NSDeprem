@@ -19,7 +19,7 @@ Purpose of the project
 
 ## Tech-stack :calling:
 
-<img src="images/clean-modular.png" width="150" align="right" hspace="20">
+<img src="images/clean-modular.png" width="200" align="right" hspace="20">
 
 * [Clean Swift Architecture](https://hackernoon.com/introducing-clean-swift-architecture-vip-770a639ad7bf)
 
