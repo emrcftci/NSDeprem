@@ -14,7 +14,7 @@ Purpose of the project
 <img src="images/nsdeprem-preview.gif" />
 </p>
 
-<center> <h1>Powered by [Kandilli Rasathanesi ve Deprem Arastirma Enstitusu](http://m.koeri.boun.edu.tr/dbs3/) :star: </h1> </center>
+<center> <h3>Powered by [Kandilli Rasathanesi ve Deprem Arastirma Enstitusu](http://m.koeri.boun.edu.tr/dbs3/) :star: </h3> </center>
 
 
 ## Tech-stack :calling:
