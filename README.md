@@ -28,7 +28,7 @@ Tech-stack :calling:
 
 * [Cache Mechanism - NSCache](https://www.hackingwithswift.com/example-code/system/how-to-cache-data-using-nscache)
 
-<div style="height: 100px"></div>
+<p></p>
 
 TODO :clipboard:
 ======================
@@ -37,14 +37,14 @@ TODO :clipboard:
 - [ ] Increase performance
 
 
-### Thanks for your support!!
+Thanks for your support!! :trollface:
+======================
 
 :arrow_right: [Ali Can Batur]()
 
 <p align="center">
 <img src="images/alicanbatur.png" />
 </p>
-:trollface:
 
 
 Find this repo useful?
