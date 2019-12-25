@@ -35,16 +35,6 @@ Purpose of the project
 - [ ] Increase performance
 
 
-Thanks for your support!! :trollface:
-======================
-
-:arrow_right: [Ali Can Batur]()
-
-<p align="center">
-<img src="images/alicanbatur.png" />
-</p>
-
-
 Find this repo useful?
 ======================
 
